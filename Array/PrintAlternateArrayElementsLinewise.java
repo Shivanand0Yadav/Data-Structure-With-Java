@@ -15,6 +15,7 @@ public class PrintAlternateArrayElementsLinewise {
         System.out.println("Your Output");
         for(int i=0;i<n;i+=2){
             System.out.println(arr[i]);
+            
         }
     }
 }
