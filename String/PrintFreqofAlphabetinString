@@ -1,0 +1,24 @@
+// Given a string consisting of only small case alphabets. Find the frequency of each alphabet in O(N) time and you can take extra space. 
+// Then print the frequency of each alphabet in the string if that alphabet is contained in the string.
+import java.io.*;
+import java.util.*;
+
+public class PrintFreqofAlphabetinString {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.next();
+        int[] freq=new int[26];
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            freq[ch-'a']++;
+        }
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(freq[ch-'a']!=0){
+                System.out.println(ch+"-"+freq[ch-'a']);
+                freq[ch-'a']=0;
+            }
+        }
+    }
+}
